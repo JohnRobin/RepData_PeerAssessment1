@@ -1,7 +1,10 @@
-#Reproduceable Data: Assignment 1#
+---
+title: "Reproducible Research: Peer Assessment 1"
+---
 ###John Robinson###
 
-####Loading data####
+
+####Loading and preprocessing the data
 
 The data file activity.csv is loaded with no further processing
 
@@ -12,7 +15,7 @@ unzip("activity.zip") # Unzip the data
 activityData <- read.csv("activity.csv") # Load the data into a variable
 ```
 
-####Summarise the mean number of steps per day####
+####What is mean total number of steps taken per day?
 
 
 ```r
@@ -31,3 +34,18 @@ summary(tapply(activityData$steps,activityData$date,sum))
 ```
 
 The data show a mean number of steps of 10770 with a median value of 10760
+
+
+
+
+
+
+#### What is the average daily activity pattern?
+
+
+
+#### Imputing missing values
+
+
+
+#### Are there differences in activity patterns between weekdays and weekends?

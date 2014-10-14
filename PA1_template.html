@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title></title>
+<title>What is the average daily activity pattern?</title>
 
 <script type="text/javascript">
 window.onload = function() {
@@ -201,10 +201,9 @@ hr {
 </head>
 
 <body>
-<p>#Reproduceable Data: Assignment 1#
-###John Robinson###</p>
+<p>###John Robinson###</p>
 
-<p>####Loading data####</p>
+<p>####Loading and preprocessing the data</p>
 
 <p>The data file activity.csv is loaded with no further processing</p>
 
@@ -213,7 +212,7 @@ unzip(&quot;activity.zip&quot;) # Unzip the data
 activityData &lt;- read.csv(&quot;activity.csv&quot;) # Load the data into a variable
 </code></pre>
 
-<p>####Summarise the mean number of steps per day####</p>
+<p>####What is mean total number of steps taken per day?</p>
 
 <pre><code class="r">hist(as.numeric(tapply(activityData$steps,activityData$date,sum)),main=&quot;Steps per day&quot;, xlab=&quot;Steps per day&quot;,breaks=61,col=&quot;Red&quot;)
 </code></pre>
@@ -228,6 +227,12 @@ activityData &lt;- read.csv(&quot;activity.csv&quot;) # Load the data into a var
 </code></pre>
 
 <p>The data show a mean number of steps of 10770 with a median value of 10760</p>
+
+<h4>What is the average daily activity pattern?</h4>
+
+<h4>Imputing missing values</h4>
+
+<h4>Are there differences in activity patterns between weekdays and weekends?</h4>
 
 </body>
 
