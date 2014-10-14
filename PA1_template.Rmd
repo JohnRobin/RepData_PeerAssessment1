@@ -1,8 +1,6 @@
----
-title: "Reproducible Research: Peer Assessment 1"
----
-###John Robinson###
+#Reproducible Research: Peer Assessment 1
 
+###John Robinson###
 
 ####Loading and preprocessing the data
 
