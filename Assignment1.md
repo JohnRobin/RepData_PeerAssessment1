@@ -5,7 +5,8 @@
 
 The data file activity.csv is loaded with no further processing
 
-```{r Data loading and preparation}
+
+```r
 setwd("C:/Users/John/git/RepData1") # Set the working directory
 unzip("activity.zip") # Unzip the data
 activityData <- read.csv("activity.csv") # Load the data into a variable
@@ -13,13 +14,20 @@ activityData <- read.csv("activity.csv") # Load the data into a variable
 
 ####Summarise the mean number of steps per day####
 
-```{r Histogram and summary of base data Steps per day, fig.height=4,fig.width=4}
 
+```r
 hist(as.numeric(tapply(activityData$steps,activityData$date,sum)),main="Steps per day", xlab="Steps per day",breaks=61,col="Red")
+```
 
+![plot of chunk Histogram and summary of base data Steps per day](figure/Histogram and summary of base data Steps per day-1.png) 
+
+```r
 summary(tapply(activityData$steps,activityData$date,sum))
+```
 
-
+```
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+##      41    8841   10760   10770   13290   21190       8
 ```
 
 The data show a mean number of steps of 10770 with a median value of 10760
