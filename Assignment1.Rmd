@@ -1,0 +1,25 @@
+#Reproduceable Data: Assignment 1#
+###John Robinson###
+
+####Loading data####
+
+The data file activity.csv is loaded with no further processing
+
+```{r Data loading and preparation}
+setwd("C:/Users/John/git/RepData1") # Set the working directory
+unzip("activity.zip") # Unzip the data
+activityData <- read.csv("activity.csv") # Load the data into a variable
+```
+
+####Summarise the mean number of steps per day####
+
+```{r Histogram and summary of base data Steps per day}
+
+hist(as.numeric(tapply(activityData$steps,activityData$date,sum)),main="Steps per day", xlab="Steps per day",breaks=61,col="Red")
+
+summary(tapply(activityData$steps,activityData$date,sum))
+
+
+```
+
+The data show a mean number of steps
