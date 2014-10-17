@@ -80,7 +80,7 @@ The addition of the estimates, taken from the calculated mean steps per five min
 
 #### Are there differences in activity patterns between weekdays and weekends?
 
-To investigate differneces in activity between week days and weekends, a new column was created of the day names, called days.This column was then parsed to a logical vector, to identify weekend days, and turned into a factor.
+To investigate differences in activity between week days and weekends, a new column was created of the day names, called days.This column was then parsed to a logical vector, to identify weekend days, and turned into a factor.
 
 ```{r Create a factor vriable for weekends}
 fullactivityData <- cbind(fullactivityData,fullactivityData$date) # Create an extra column
@@ -90,7 +90,7 @@ fullactivityData$days <- fullactivityData$days[] %in% c("Saturday","Sunday") # P
 fullactivityData$days <- factor(fullactivityData$days,labels=c("Weekday","Weekend")) # Turn it into a factor
 ```
 
-The full set of ctivity data is then interrograted to determine the mean number of steps on weekdays and weekends, and plot a smoothed view of the data.
+The full set of activity data is then interrograted to determine the mean number of steps on weekdays and weekends, and plot a smoothed view of the data.
 
 ```{r Determine weekday and weekend means}
 weekendActivity <- fullactivityData[fullactivityData$days=="Weekend",] 

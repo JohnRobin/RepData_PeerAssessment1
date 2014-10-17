@@ -287,7 +287,7 @@ for (i in 1:dim(fullactivityData)[1]){  #loop through all elements
 
 <h4>Are there differences in activity patterns between weekdays and weekends?</h4>
 
-<p>To investigate differneces in activity between week days and weekends, a new column was created of the day names, called days.This column was then parsed to a logical vector, to identify weekend days, and turned into a factor.</p>
+<p>To investigate differences in activity between week days and weekends, a new column was created of the day names, called days.This column was then parsed to a logical vector, to identify weekend days, and turned into a factor.</p>
 
 <pre><code class="r">fullactivityData &lt;- cbind(fullactivityData,fullactivityData$date) # Create an extra column
 names(fullactivityData)[4]=&quot;days&quot; # Rename the column
@@ -296,7 +296,7 @@ fullactivityData$days &lt;- fullactivityData$days[] %in% c(&quot;Saturday&quot;,
 fullactivityData$days &lt;- factor(fullactivityData$days,labels=c(&quot;Weekday&quot;,&quot;Weekend&quot;)) # Turn it into a factor
 </code></pre>
 
-<p>The full set of ctivity data is then interrograted to determine the mean number of steps on weekdays and weekends, and plot a smoothed view of the data.</p>
+<p>The full set of activity data is then interrograted to determine the mean number of steps on weekdays and weekends, and plot a smoothed view of the data.</p>
 
 <pre><code class="r">weekendActivity &lt;- fullactivityData[fullactivityData$days==&quot;Weekend&quot;,] 
 weekdayActivity &lt;- fullactivityData[fullactivityData$days==&quot;Weekday&quot;,]
