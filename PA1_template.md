@@ -125,7 +125,7 @@ weekdaySteps <- tapply(weekdayActivity$steps,weekdayActivity$interval,mean)
 stepData <- data.frame(c(as.numeric(weekendSteps),as.numeric(weekdaySteps)),c(1:288,1:288),c(rep("Weekend",times=288),rep("Weekday",times=288))) # Create a data frame for plotting results
 names(stepData) <- c("Steps","Interval","Days")                      
 library("lattice", lib.loc="D:/Programs/R/R-3.1.1/library")
-xyplot(Steps~Interval|Days,data=stepData,type=c("spline","g"))
+xyplot(Steps~Interval|Days,data=stepData,type=c("spline","g"),layout=c(1,2))
 ```
 
 ![plot of chunk Determine weekday and weekend means](figure/Determine weekday and weekend means-1.png) 
